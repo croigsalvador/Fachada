@@ -21,11 +21,9 @@
     return _sharedFacebook;
 }
 
-
 - (void)giveContactData:(NSString *)idContact completionBlock:(void(^)(NSDictionary *dict, NSError *error))completion {
     
     if ([self checkParamaters:idContact]) {
-        
         NSDictionary *result = [self cacheHit:idContact];
         
         if (result) {
@@ -46,5 +44,12 @@
     
     return result;
 }
+
+#pragma mark - Protocol Methods
+
+- (void)giveContactWith:(NSString *)idContact andCompletionBlock:(void (^)(NSDictionary *, NSError *))completion {
+    [self giveContactData:idContact completionBlock:completion];
+}
+
 
 @end

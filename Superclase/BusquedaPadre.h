@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SearchProtocol.h"
 
-@interface BusquedaPadre : NSObject
+@interface BusquedaPadre : NSObject <SearchProtocol>
 
 - (BOOL)checkParamaters:(NSString *)idContact;
 - (void)giveContactData:(NSString *)idContact completionBlock:(void(^)(NSDictionary *dict, NSError *error))completion;
 
--(id)cacheHit:(NSString *)idContact;
+- (id)cacheHit:(NSString *)idContact;
 - (void)addCache:(id)contact name:(NSString *)name;
 
 

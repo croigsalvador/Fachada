@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5F66E2196C38B7002B363C /* AgendaContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F66E1196C38B7002B363C /* AgendaContact.m */; };
 		8CAE593D195B1D7000F76818 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAE593C195B1D7000F76818 /* Foundation.framework */; };
 		8CAE593F195B1D7000F76818 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAE593E195B1D7000F76818 /* CoreGraphics.framework */; };
 		8CAE5941195B1D7000F76818 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAE5940195B1D7000F76818 /* UIKit.framework */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D5F66DF196C383F002B363C /* SearchProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchProtocol.h; path = Superclase/SearchProtocol.h; sourceTree = "<group>"; };
+		1D5F66E0196C38B7002B363C /* AgendaContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaContact.h; sourceTree = "<group>"; };
+		1D5F66E1196C38B7002B363C /* AgendaContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaContact.m; sourceTree = "<group>"; };
 		8CAE5939195B1D7000F76818 /* Superclase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Superclase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAE593C195B1D7000F76818 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CAE593E195B1D7000F76818 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,11 +92,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D5F66DD196C31F8002B363C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE5951195B1D7000F76818 /* ViewController.h */,
+				8CAE5952195B1D7000F76818 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1D5F66DE196C3209002B363C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE594B195B1D7000F76818 /* AppDelegate.h */,
+				8CAE594C195B1D7000F76818 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		8C959D2C195BE163000435FD /* Fachada */ = {
 			isa = PBXGroup;
 			children = (
 				8CAE5971195B1E5000F76818 /* MotorBusqueda.h */,
 				8CAE5972195B1E5000F76818 /* MotorBusqueda.m */,
+				1D5F66DF196C383F002B363C /* SearchProtocol.h */,
 				8C959D2E195BE1AB000435FD /* Clientes */,
 			);
 			name = Fachada;
@@ -102,8 +125,7 @@
 		8C959D2D195BE18C000435FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8CAE5951195B1D7000F76818 /* ViewController.h */,
-				8CAE5952195B1D7000F76818 /* ViewController.m */,
+				8CAE594E195B1D7000F76818 /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -115,6 +137,8 @@
 				8CAE5975195B226E00F76818 /* BusquedaPadre.m */,
 				8CAE5977195B252C00F76818 /* FacebookContact.h */,
 				8CAE5978195B252C00F76818 /* FacebookContact.m */,
+				1D5F66E0196C38B7002B363C /* AgendaContact.h */,
+				1D5F66E1196C38B7002B363C /* AgendaContact.m */,
 			);
 			name = Clientes;
 			path = Superclase;
@@ -153,12 +177,10 @@
 		8CAE5942195B1D7000F76818 /* Superclase */ = {
 			isa = PBXGroup;
 			children = (
-				8CAE594B195B1D7000F76818 /* AppDelegate.h */,
-				8CAE594C195B1D7000F76818 /* AppDelegate.m */,
+				1D5F66DE196C3209002B363C /* AppDelegate */,
+				1D5F66DD196C31F8002B363C /* Controller */,
 				8C959D2D195BE18C000435FD /* Views */,
 				8C959D2C195BE163000435FD /* Fachada */,
-				8CAE5954195B1D7000F76818 /* Images.xcassets */,
-				8CAE594E195B1D7000F76818 /* Main.storyboard */,
 				8CAE5943195B1D7000F76818 /* Supporting Files */,
 			);
 			path = Superclase;
@@ -167,6 +189,7 @@
 		8CAE5943195B1D7000F76818 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8CAE5954195B1D7000F76818 /* Images.xcassets */,
 				8CAE5944195B1D7000F76818 /* Superclase-Info.plist */,
 				8CAE5945195B1D7000F76818 /* InfoPlist.strings */,
 				8CAE5948195B1D7000F76818 /* main.m */,
@@ -293,6 +316,7 @@
 				8CAE5979195B252C00F76818 /* FacebookContact.m in Sources */,
 				8CAE5976195B226E00F76818 /* BusquedaPadre.m in Sources */,
 				8CAE5953195B1D7000F76818 /* ViewController.m in Sources */,
+				1D5F66E2196C38B7002B363C /* AgendaContact.m in Sources */,
 				8CAE5973195B1E5000F76818 /* MotorBusqueda.m in Sources */,
 				8CAE594D195B1D7000F76818 /* AppDelegate.m in Sources */,
 				8CAE5949195B1D7000F76818 /* main.m in Sources */,

@@ -9,8 +9,7 @@
 #import "BusquedaPadre.h"
 
 
-@implementation BusquedaPadre
-{
+@implementation BusquedaPadre {
     NSCache *_cache;
 }
 
@@ -47,5 +46,21 @@
 - (void)addCache:(id)contact name:(NSString *)name {
     [_cache setObject:contact forKey:name];
 }
+
+#pragma mark - Protocol Methods 
+
+- (void)giveContactWith:(NSString *)idContact andCompletionBlock:(void (^)(NSDictionary *, NSError *))completion {
+//    [NSException raise:NSInternalInconsistencyException
+//				format:@"%@: Subclasses must override this method", NSStringFromSelector(_cmd)];
+     NSAssert(nil, @"Subclasses must override this method");    
+}
+
+
+
+
+
+
+
+
 
 @end
